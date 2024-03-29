@@ -6,13 +6,12 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import NavBar from './components/shared/NavBar/NavBar';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 
 function App() {
   return (
     <div className="App">
-      <Greating message={"Quantix LLC"} firstName={"Ermal"} lastName={"Kelmendi"}/>
+      {/* <Greating message={"Quantix LLC"} firstName={"Ermal"} lastName={"Kelmendi"}/> */}
     <BrowserRouter>
      <NavBar/>
       <Routes>

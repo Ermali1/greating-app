@@ -1,3 +1,26 @@
-.NavBar {
-    
-}
+.container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+  }
+  
+  .right {
+    display: flex;
+  }
+  
+  .right a {
+    margin-left: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .right {
+      display: none;
+    }
+  }
+  
