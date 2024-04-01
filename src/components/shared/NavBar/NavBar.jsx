@@ -1,73 +1,42 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-// import imageLogo from '../../../assets/logo.png'
+import React, { useState } from 'react';
+import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
+import Logo from '../../../assets/logo.png'
 
-// function NavBar() {
-//   return (
-//     <div className='NavBar'>
-//         <div className="left">
-//             <div className="navbar-logo">
-//                 <img src={imageLogo} alt="logo" />
-//             </div>
-//         </div>
-//         <div className="right">
-//             <Link to="/Home">Home</Link>
-//             <Link to="/About">About</Link>
-//             <Link to="/Contact">Contact</Link>
-//         </div>
-//     </div>
-//   )
-// }
+const NavBar = () => {
+    let Links =[
+        {name:"HOME",link:"Home"},
+        {name:"ABOUT",link:"About"},
+        {name:"CONTACT",link:"Contact"},
+      ];
+      let [open, setOpen] =useState(false);
 
-// export default NavBar
-
-import React from 'react';
-import { Link } from 'react-router-dom';
-import imageLogo from '../../../assets/logo.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './NavBar.scss';
-
-function NavBar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
-          <img src={imageLogo} alt="logo" height="30" />
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/Home">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/About">
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Contact">
-                Contact
-              </Link>
-            </li>
-          </ul>
+    return (
+        <div className=' shadow-md px-[6%]'>
+           <div className='items-center justify-between py-4 bg-white md:flex md:px-10 px-7'>
+            {/* logo section */}
+            <div className='w-32'>
+                <img src={Logo} alt="" />
+            </div>
+            {/* Menu icon */}
+            <div onClick={()=>setOpen(!open)} className='absolute cursor-pointer right-8 top-6 md:hidden w-7 h-7'>
+                {
+                    open ? <XMarkIcon/> : <Bars3BottomRightIcon />
+                }
+            </div>
+            {/* linke items */}
+            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
+                {
+                    Links.map((link) => (
+                    <li className='font-semibold md:ml-8 md:my-0 my-7'>
+                        <a href={link.link} className='text-gray-800 duration-500 hover:text-blue-400'>{link.name}</a>
+                    </li>))
+                }
+                
+            </ul>
+            {/* button */}
+           </div>
         </div>
-      </div>
-    </nav>
-  );
-}
+    );
+};
 
 export default NavBar;
