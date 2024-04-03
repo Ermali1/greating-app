@@ -32,7 +32,6 @@ export default function SingleCrew() {
               <h2 className="mb-5 text-lg font-bold text-white">Details</h2>
               <ul className="text-sm text-white opacity-75">
                 <li className="mb-2">Currently at {singleCrew.agency}</li>
-                {/* <li className="mb-2">{singleCrew.launches.length} launches</li> */}
                 {singleCrew.status === "active" ? (
                   <li className="capitalize text-emerald-500">
                     Status: {singleCrew.status}

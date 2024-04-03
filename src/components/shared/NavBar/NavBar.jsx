@@ -44,32 +44,36 @@
 
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import Logo from "../../../assets/logo.png"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
-      <header className="absolute flex items-center justify-between w-full px-5">
+      <header className="absolute flex items-center justify-between w-full p-5">
+        <figure>
+          <img className="w-32" src={Logo} alt="" />
+        </figure>
         <nav className={`${isOpen ? "open" : ""}`}>
-          <ul className="">
+          <ul className="gap-10">
             <li>
-              <Link to="/Home" className="text-sm text-white">
+              <Link to="/Home" className="text-lg text-white">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/Crew" className="text-sm text-white">
+              <Link to="/Crew" className="text-lg text-white">
                 Crew
               </Link>
             </li>
             <li>
-              <Link to="/About" className="text-sm text-white">
+              <Link to="/About" className="text-lg text-white">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/Contact" className="text-sm text-white">
+              <Link to="/Contact" className="text-lg text-white">
                 Contact
               </Link>
             </li>
