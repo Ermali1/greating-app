@@ -7,20 +7,20 @@ import './Contact.scss'
 
 function Contact() {
   return (
-    <div className='Contact flex items-center justify-center w-full min-h-screen gap-40 py-32'>
-      <div className="contactUs flex flex-col justify-between gap-6 text-white w-96">
+    <div className='flex items-center justify-center w-full min-h-screen gap-40 py-32 Contact'>
+      <div className="flex flex-col justify-between gap-6 text-white contactUs w-96">
         <div className="">
           <h1 className='text-4xl font-bold tracking-wide'>Contact Us</h1>
           <p className='pt-2 text-sm'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam neque, perferendis minima sit nostrum molestias ullam incidunt laudantium labore impedit porro dicta unde asperiores vel, ratione iure exercitationem, praesentium ipsum.</p>
         </div>
-        <div className="insideContactUs flex flex-col space-y-6">
+        <div className="flex flex-col space-y-6 insideContactUs">
             <PhoneNumber/>          
             <Email/>
             <Location/>
         </div>
         
       </div>
-      <div className="companyBottom flex flex-col gap-5">
+      <div className="flex flex-col gap-5 companyBottom">
         <div className='flex flex-col gap-5'>
           <h2 className='text-3xl font-bold text-white '>The Company</h2>
           <ul className="flex flex-col gap-3">
@@ -32,11 +32,6 @@ function Contact() {
               <li>
                 <Link to="/Crew" className="text-lg text-white">
                   Crew
-                </Link>
-              </li>
-              <li>
-                <Link to="/About" className="text-lg text-white">
-                  About
                 </Link>
               </li>
               <li>

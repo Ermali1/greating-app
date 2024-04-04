@@ -1,8 +1,8 @@
 .navbar {
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     background-color: #fff;
-    border-bottom: 1px solid #282828;
+    border-bottom: 1px solid #28282811;
 
     .ulNavbar {
         display: flex;
@@ -12,7 +12,15 @@
             height: 100%;
             display: flex;
             align-items: center;
+            transition: all 250ms linear;
+            
+            &:hover {
+                color: #000;
+                box-shadow: 0 2px 0 0 currentcolor;
         }
+
+        
+    }
     }
 
     .inRightDivTwo{
@@ -54,13 +62,13 @@
 
 
     #mobile-menu {
-        transition: max-height 0.3s ease-in-out; /* Add transition for smooth animation */
-        max-height: 0; /* Initially hide the mobile menu */
-        overflow: hidden; /* Hide overflowing content */
+        transition: max-height 0.3s ease-in-out; 
+        max-height: 0; 
+        overflow: hidden;
       }
       
       #mobile-menu.block {
-        max-height: 1000px; /* Set max-height to accommodate content when menu is open */
+        max-height: 1000px; 
       }
 
 }

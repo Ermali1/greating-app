@@ -11,7 +11,7 @@
         justify-content: space-between;
         gap: max(50px, 2.5vw);
         padding: 4% 2%;
-        border-top: 1px solid #66666e;
+        border-top: 1px solid #66666e33;
 
         .Footer__1__left {
             display: flex;
@@ -34,7 +34,6 @@
                 .subscribeInput{
                     width: max(400px, 20vw);
                     height: max(70px, 3.5vw);
-                    background-color: red;
                     display: flex;
                     align-items: center;
                     border-radius: max(10px, 0.5vw);
@@ -155,7 +154,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        border-top: 1px solid #66666e;
+        border-top: 1px solid #66666e33;
         padding: max(30px, 1.5vw);
         p {
             font-size: max(16px, 0.8vw);

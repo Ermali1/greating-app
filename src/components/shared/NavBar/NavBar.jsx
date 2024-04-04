@@ -78,11 +78,6 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/About" className="text-lg text-white">
-                      About
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/Contact" className="text-lg text-white">
                       Contact
                     </Link>
@@ -94,7 +89,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      
       <div className={!isOpen ? "block sm:hidden" : "hidden"} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 addSomeWidth">
           <ul className="gap-10">
@@ -106,11 +101,6 @@ export default function Header() {
             <li>
               <Link to="/Crew" className="text-lg text-white">
                 Crew
-              </Link>
-            </li>
-            <li>
-              <Link to="/About" className="text-lg text-white">
-                About
               </Link>
             </li>
             <li>

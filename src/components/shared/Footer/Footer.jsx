@@ -40,10 +40,6 @@ const Footer = () => {
                         Crew
                         </Link>
 
-                        <Link to="/About">
-                        About
-                        </Link>
-
                         <Link to="/Contact">
                         Contact
                         </Link>
