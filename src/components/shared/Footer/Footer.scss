@@ -1,0 +1,166 @@
+.Footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+
+    .Footer__1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: max(50px, 2.5vw);
+        padding: 4% 2%;
+        border-top: 1px solid #66666e;
+
+        .Footer__1__left {
+            display: flex;
+            flex-direction: column;
+            gap: max(40px, 2vw);
+
+            .footer__logo {
+                width: max(200px, 10vw);
+                content: url('../../../assets/logo.png');
+                cursor: pointer !important;
+            }
+
+            .subscribe {
+                display: flex;
+                flex-direction: column;
+                gap: max(10px, 0.5vw);
+
+
+
+                .subscribeInput{
+                    width: max(400px, 20vw);
+                    height: max(70px, 3.5vw);
+                    background-color: red;
+                    display: flex;
+                    align-items: center;
+                    border-radius: max(10px, 0.5vw);
+                    position: relative;
+                    border: 2px solid #282828;
+                    overflow: hidden;
+
+                    input {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        outline: none;
+                        border: none;
+                        padding-left: max(20px, 1vw);
+                    }
+
+                    button {
+                        position: absolute;
+                        right: max(10px, 0.5vw);
+                        height: 80%;
+                        width: max(100px, 5vw);
+                        font-size: max(16px, 0.8vw);
+                        font-family: sans-serif;
+                        background-color: #282828;
+                        color: #fff !important;
+                        display: flex;
+                        align-items: center;        
+                        justify-content: center;
+                        border-radius: max(10px, 0.5vw);
+                        text-transform: capitalize;
+                        font-weight: bold;
+                        transition: all 250ms linear;
+                
+                        &:hover {
+                            background-color: transparent;
+                            border: 4px solid #282828;
+                            color: #282828 !important;
+                            box-shadow: inset 0 0 max(20px, 1vw) rgba(0,0,0, 0.2);
+                        }
+                    }
+
+                  
+                }
+
+          
+
+
+            }
+
+            @media (max-width: 440px) {
+                width: 100% !important;
+            
+                .subscribe {
+                    width: 100%;
+                    
+                    .subscribeInput {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+                
+            }
+        }
+
+        .Footer__1__right{
+            display: flex;
+            flex-direction: column;
+            gap: max(20px, 1vw);
+
+            .Footer__1__right__top {
+                display: flex;
+                flex-direction: column;
+                gap: max(10px, 0.5vw);
+
+                .footerLinks{
+                    display: flex;
+                    flex-direction: column;
+                    gap: max(10px, 0.5vw);
+
+                    a {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .footer__bottom {
+                margin: max(20px, 1vw) 0;
+            }
+        }
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            .Footer__1__left {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                
+            }
+        }
+
+    }
+    
+    .makeBold {
+        font-weight: bold;
+        font-size: max(18px, 0.9vw);
+    }
+
+
+    .Footer__2 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-top: 1px solid #66666e;
+        padding: max(30px, 1.5vw);
+        p {
+            font-size: max(16px, 0.8vw);
+            font-weight: 400;
+            color: #66666e;
+        }
+    }
+}

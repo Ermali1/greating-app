@@ -1,0 +1,35 @@
+.Contact {
+    
+    @media (max-width: 810px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 420px) {
+        display: flex;
+        flex-direction: column;
+
+        .contactUs {
+            width: 100%;
+            text-align: center;    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .insideContactUs {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .companyBottom {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+    }
+}

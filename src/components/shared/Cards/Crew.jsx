@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import Loading from '../../LoadingState'
 import { Link } from 'react-router-dom'
+import './Crew.scss'
 
 export default function Crew() {
     const [crew, setCrew] = useState([])
@@ -24,7 +25,7 @@ export default function Crew() {
                <Link key={id} to={`/crew/${id}`}>
                  <article className='relative'>
                     <img src={image} alt={name} loading='lazy' className='object-cover w-full h-96' />
-                    <h2 className='absolute text-lg font-bold tracking-wide text-white bottom-5 left-5'>{name}</h2>
+                    <h2 className='absolute text-lg font-bold tracking-wide text-white bottom-5 left-5 crewName'>{name}</h2>
                 </article>
                </Link>
             ))}

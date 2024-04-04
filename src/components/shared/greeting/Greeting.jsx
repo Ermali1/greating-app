@@ -1,13 +1,21 @@
-import React from 'react'
-import "./greeting.scss"
+import React from "react";
+import "./greeting.scss";
+import { Link } from "react-router-dom";
 
-function Greeting(props) {
+function Greeting({ message, btnText }) {
   return (
-    <div className='Greeting'>
-      {props.message}
-      <h1>{props.firstName}{props.lastName}</h1>
+    <div className="Greeting ">
+      <h1>{message}</h1>
+
+      {btnText ? (
+        <Link className="Greeting__btn" to={"/Contact"}>
+          {btnText}
+        </Link>
+      ) : (
+        <></>
+      )}
     </div>
-  )
+  );
 }
 
-export default Greeting
+export default Greeting;

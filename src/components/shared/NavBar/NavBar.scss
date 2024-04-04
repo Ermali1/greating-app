@@ -1,0 +1,66 @@
+.navbar {
+    position: fixed;
+    z-index: 99;
+    background-color: #fff;
+    border-bottom: 1px solid #282828;
+
+    .ulNavbar {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .inRightDivTwo{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (min-width: 640px) {
+            display: none !important;
+        }
+    }
+
+    .inRight {
+        float: right;
+        justify-self: flex-end;
+    }
+
+    #mobile-menu {
+        align-self: flex-end !important;
+        display: flex !important;
+        align-items: flex-end !important;
+
+        .addSomeWidth {
+            width: 100%;
+        }
+
+        ul {
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center !important;
+        }
+
+        @media (min-width: 640px) {
+            display: none !important;
+        }
+    }
+
+
+    #mobile-menu {
+        transition: max-height 0.3s ease-in-out; /* Add transition for smooth animation */
+        max-height: 0; /* Initially hide the mobile menu */
+        overflow: hidden; /* Hide overflowing content */
+      }
+      
+      #mobile-menu.block {
+        max-height: 1000px; /* Set max-height to accommodate content when menu is open */
+      }
+
+}
